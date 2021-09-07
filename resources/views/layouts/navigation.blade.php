@@ -15,6 +15,10 @@
                     <x-nav-link :href="route('bk')" :active="request()->routeIs('bk')">
                         {{ __('Bimbingan Konseling') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('kepsek')" :active="request()->routeIs('kepsek')">
+                        {{ __('Kepala Sekolah') }}
+                    </x-nav-link>
                 <!-- Navigation home -->
                     <x-nav-link :href="route('visi')" :active="request()->routeIs('visi')">
                         {{ __('Visi & Misi') }}

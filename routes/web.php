@@ -23,3 +23,6 @@ Route::get('/bk', function () {
 })->middleware(['auth'])->name('bk');
 
 require __DIR__.'/auth.php';
+
+Route::view('/kepsek', 'kepsek')-> name('kepsek');
+Route::view('/personal', 'personal')-> name('personal');
