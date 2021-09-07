@@ -7,15 +7,7 @@
             {{ __('Data Personal Siswa') }}
         </h2>
     </x-slot>
-    <div class="bg-gray-100">
-        <div class="w-full text-white bg-main-color">
-               <div x-data="{ open: false }"
-                   <nav :class="{'flex': open, 'hidden': !open}"
-                       class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-                       </div>
-                   </nav>
-               </div>
-           </div>
+
            <!-- End of Navbar -->
 
            <div class="container mx-auto my-5 p-5">
@@ -26,9 +18,9 @@
                        <div class="bg-white p-3 border-t-4 border-green-400">
                            <div class="image overflow-hidden">
                                <img class="h-auto w-full mx-auto"
-                                   src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
-                                   alt="">
-                           </div>
+                                src="{{ asset('img/rick.JFIF') }}" width="250vw" alt="logo">
+
+                            </div>
                            <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">J. PANGESTU</h1>
                            <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Siswa SMK 2 PGRI Denpasar</p>
                            <ul
@@ -98,14 +90,17 @@
                                        <div class="px-4 py-2 font-semibold">Tanggal Lahir</div>
                                        <div class="px-4 py-2">14-11-1998</div>
                                    </div>
+                                   <div class="grid grid-cols-2">
+                                    <div class="px-4 py-2 font-semibold">Total Poin</div>
+                                    <div class="px-4 py-2">20</div>
+                                </div>
                                </div>
                            </div>
-                           <div class="py-4"></div>
+                           <div class="py-3"></div>
                            <button
                                class="block w-full bg-green-500 text-grey-800 text-sm font-semibold rounded-lg hover:bg-green-600 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">SMS</button>
                             <button
                                class="block w-full bg-green-500 text-grey-800 text-sm font-semibold rounded-lg hover:bg-green-600 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Cetak Laporan</button>
-
                      </div>
 
                        <!-- End of about section -->
