@@ -69,7 +69,7 @@
                           <td class="px-4 py-4">
                             <div class="md:space-x-2 space-y-10 md:space-y-0">
                                 <button
-                                class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-green-400 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
+                                class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
                                 @click="showModal1 = true"> edit </button>
                             </div>
                           </td>
@@ -164,20 +164,20 @@
                               <td class="px-4 py-4">1</td>
                               <td class="px-4 py-4">9/7/2021</td>
                               <td class="px-4 py-4">884001</td>
-                              <td class="px-4 py-4">14-11-98</td>
-                              <td class="px-4 py-4">Laki-laki</td>
-                              <td class="px-4 py-4">Aokigahara</td>
-                              <td class="px-4 py-4">PP Miky</td>
-                              <td class="px-4 py-4">081 *** *** ***</td>
+                              <td class="px-4 py-4">Ajie</td>
+                              <td class="px-4 py-4">2017</td>
+                              <td class="px-4 py-4">Semester Genap</td>
+                              <td class="px-4 py-4">I ( Pelecehan Seksual )</td>
+                              <td class="px-4 py-4">Ngentod</td>
                               <td class="px-4 py-4">20</td>
                               <td class="px-4 py-4">
                                 <div class="md:space-x-2 space-y-10 md:space-y-0">
                                     <button
-                                    class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-green-400 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
+                                    class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
                                     @click="showModal2 = true"> edit </button>
 
                                     <button
-                                    class="bg-blue-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-green-400 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
+                                    class="bg-green-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
                                     @click="showModal3 = true"> SMS </button>
                                </div>
                               </td>
@@ -186,11 +186,13 @@
                             </tr>
                             <tr class="hover:bg-gray-100 border-b border-gray-200 py-4">
                               <td class="px-4 py-4 flex items-center">2</td>
+                              <td class="px-4 py-4"></td>
                               <td class="px-4 py-4">884002</td>
                               <td class="px-4 py-4">Kresna</td>
                             </tr>
                             <tr class="hover:bg-gray-100  border-gray-200">
-                              <td class="px-4 py-4">2</td>
+                              <td class="px-4 py-4">3</td>
+                              <td class="px-4 py-4"></td>
                               <td class="px-4 py-4">884003</td>
                               <td class="px-4 py-4">Dimas</td>
                             </tr>
@@ -258,8 +260,8 @@
   };
 </script>
 </div>
-<!-- Modal edit -->
-{{-- <div
+{{-- <!-- Modal edit -->
+<div
 class="fixed inset-0 w-full h-full z-20 bg-black bg-opacity-50 duration-300 overflow-y-auto"
 x-show="showModal1"
 x-transition:enter="transition duration-300"
@@ -295,33 +297,43 @@ x-transition:leave-end="opacity-0"
     <main class="p-2 text-center">
 
             <div class="grid grid-cols-1 mt-5 mx-7">
-              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Input 1</label>
-              <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Input 1" />
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">NISN</label>
+              <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="NISN" />
             </div>
+
+            <div class="grid grid-cols-1 mt-5 mx-7">
+                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Siswa</label>
+                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Nama Siswa" />
+              </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
               <div class="grid grid-cols-1">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Input 2</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Input 2" />
+                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Tanggal lahir</label>
+                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="date" placeholder="Tanggal Lahir" />
               </div>
               <div class="grid grid-cols-1">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Input 3</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Input 3" />
+                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Selection</label>
+                <select class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                  <option>Laki-Laki</option>
+                  <option>Perempuan</option>
+                </select>
+
               </div>
             </div>
 
             <div class="grid grid-cols-1 mt-5 mx-7">
-              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Selection</label>
-              <select class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-              </select>
+                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Alamat</label>
+                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Alamat" />
+              </div>
+
+            <div class="grid grid-cols-1 mt-5 mx-7">
+                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Wali</label>
+                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Nama Wali" />
             </div>
 
             <div class="grid grid-cols-1 mt-5 mx-7">
-              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Another Input</label>
-              <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Another Input" />
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">No Telpon Wali</label>
+              <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="No Telpon Wali" />
             </div>
 
             <div class="grid grid-cols-1 mt-5 mx-7">
@@ -329,11 +341,9 @@ x-transition:leave-end="opacity-0"
             </div>
 
             <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
-              <button class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Cancel</button>
-              <button class='w-auto bg-purple-500 hover:bg-purple-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Create</button>
+
+              <button class='w-auto bg-green-500 hover:bg-green-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Create</button>
             </div>
-
-
     </main>
     <footer class="flex justify-center p-2">
     </footer>
