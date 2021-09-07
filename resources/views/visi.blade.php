@@ -8,10 +8,10 @@
         </h2>
     </x-slot>
 
-    <div class="mt-5 mx-5 overflow-hidden shadow-lg rounded-lg h-auto w-full md:w-full cursor-pointer m-auto p-4 bg-white transition duration-500 ease-in-out transform hover:translate-y-5 hover:shadow-2xl">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+    <div class="mt-10 mx-5 ">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-hidden shadow-lg rounded-lg h-auto w-full md:w-full cursor-pointer m-auto p-4 bg-white transition duration-500 ease-in-out transform hover:translate-y-5 hover:shadow-2xl">
+
+            <div class="p-6 bg-white  ">
                 <br>
                 <h2 class="text-center">Visi</h2>
                 <br>
@@ -29,7 +29,6 @@
                     </p>
 
 
-                </div>
             </div>
         </div>
     </div>
