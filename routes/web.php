@@ -18,8 +18,8 @@ Route::view('/visi', 'visi')-> name('visi');
 Route::view('/organisasi', 'organisasi')-> name('organisasi');
 
 
-Route::get('/admin', function () {
-    return view('admin');
-})->middleware(['auth'])->name('admin');
+Route::get('/bk', function () {
+    return view('bk');
+})->middleware(['auth'])->name('bk');
 
 require __DIR__.'/auth.php';
