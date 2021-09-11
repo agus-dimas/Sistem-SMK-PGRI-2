@@ -40,7 +40,12 @@
                       </div>
                     </div>
                   <div class="overflow-x-auto mt-6 w-full">
+                    <div class="md:space-x-2 space-y-10 md:space-y-0">
+                        <button
+                        class="bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
+                        @click="showModal1 = true"> Tambah Data </button>
 
+                    </div>
                     <table class="table-auto border-collapse w-full">
                       <thead>
                         <tr class="rounded-lg text-sm font-medium text-gray-700 text-left" style="font-size: 0.9674rem">
@@ -70,7 +75,7 @@
                             <div class="md:space-x-2 space-y-10 md:space-y-0">
                                 <button
                                 class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                                @click="showModal1 = true"> edit </button>
+                                @click="showModal1 = true"> Edit </button>
                             </div>
                           </td>
 
@@ -142,7 +147,12 @@
                             <div></div>
                           </div>
                         </div>
-                      <div class="overflow-x-auto mt-6 w-full">
+                        <div class="overflow-x-auto mt-6 w-full">
+                            <div class="md:space-x-2 space-y-10 md:space-y-0">
+                                <button
+                                class="bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
+                                @click="showModal1 = true"> Tambah Data </button>
+                            </div>
 
                         <table class="table-auto border-collapse w-full">
                           <thead>
@@ -175,7 +185,7 @@
                                 <div class="md:space-x-2 space-y-10 md:space-y-0">
                                     <button
                                     class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                                    @click="showModal2 = true"> edit </button>
+                                    @click="showModal2 = true"> Edit </button>
 
                                     <button
                                     class="bg-green-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
@@ -250,8 +260,12 @@
                                     <div></div>
                                 </div>
                                 </div>
-                            <div class="overflow-x-auto mt-6 w-full">
-
+                                <div class="overflow-x-auto mt-6 w-full">
+                                <div class="md:space-x-2 space-y-10 md:space-y-0">
+                                    <button
+                                    class="bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
+                                    @click="showModal1 = true"> Tambah Data </button>
+                                </div>
                                 <table class="table-auto border-collapse w-full">
                                 <thead>
                                     <tr class="rounded-lg text-sm font-medium text-gray-700 text-left" style="font-size: 0.9674rem">
