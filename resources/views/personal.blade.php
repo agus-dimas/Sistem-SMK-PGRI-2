@@ -46,7 +46,7 @@
                    <div class="w-full md:w-9/12 mx-2 h-64">
                        <!-- Profile tab -->
                        <!-- About Section -->
-                       <div class="bg-white p-3 shadow-sm rounded-sm">
+                       <div class="bg-white p-3 shadow-sm rounded-sm ">
                            <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
                                <span clas="text-green-500">
                                    <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -106,10 +106,10 @@
                        <!-- Experience and education -->
                  </div>
 
-                    <div class="bg-white p-3 shadow-sm rounded-sm">
+                    <div class=" bg-white p-3 shadow-sm rounded-sm">
                         <div class="grid grid-cols-2">
                             <div>
-                                <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
+                                <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-1">
                                     <span clas="text-green-500">
                                         <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke="currentColor">
@@ -166,18 +166,16 @@
                                         <button
                                         class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
                                         @click="showModal1 = true"> SMS </button>
-                                         </td>
+                                        </td>
                                     </tr>
                                     </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        <br>
     </div>
 </x-app-layout>
 

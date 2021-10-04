@@ -26,26 +26,24 @@
         <div  x-show="activeTab===0" class="bg-white overflow-hidden shadow-sm sm:rounded-lg ">
             <div class="p-6 bg-white border-b border-gray-200 w-full">
                 <div class="bg-white pb-4 px-4 rounded-md w-full">
-
-                <div class="w-full flex justify-end px-2 mt-2">
+                    <div class="w-full flex justify-end px-2 mt-2">
                       <div class="w-full sm:w-64 inline-block relative ">
-                        <input type="" name="" class="leading-snug border border-gray-300 block w-full appearance-none bg-gray-100 text-sm text-gray-600 py-1 px-4 pl-8 rounded-lg" placeholder="Search" />
-
-                        <div class="pointer-events-none absolute pl-3 inset-y-0 left-0 flex items-center px-2 text-gray-300">
-
-                          <svg class="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999">
+                        <div class="flex justify-between">
+                            <input type="" name="" class="leading-snug border border-gray-300 block w-full appearance-none bg-gray-100 text-sm text-gray-600 py-1 px-4 pl-8 rounded-lg" placeholder="Search" />
+                            <div class="pointer-events-none absolute pl-3 inset-y-0 left-0 flex items-center px-2 text-gray-300">
+                            <svg class="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999">
                             <path d="M508.874 478.708L360.142 329.976c28.21-34.827 45.191-79.103 45.191-127.309C405.333 90.917 314.416 0 202.666 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c48.206 0 92.482-16.982 127.309-45.191l148.732 148.732c4.167 4.165 10.919 4.165 15.086 0l15.081-15.082c4.165-4.166 4.165-10.92-.001-15.085zM202.667 362.667c-88.229 0-160-71.771-160-160s71.771-160 160-160 160 71.771 160 160-71.771 160-160 160z" />
-                          </svg>
+                            </svg>
                         </div>
                       </div>
                     </div>
+                </div>
                   <div class="overflow-x-auto mt-6 w-full">
                     <div class="md:space-x-2 space-y-10 md:space-y-0">
-                        <button
-                        class="bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                        @click="showModal1 = true"> Tambah Data </button>
+                        <button class="modal-open bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2">Tambah Data</button>
 
                     </div>
+
                     <table class="table-auto border-collapse w-full">
                       <thead>
                         <tr class="rounded-lg text-sm font-medium text-gray-700 text-left" style="font-size: 0.9674rem">
@@ -76,6 +74,7 @@
                                 <button
                                 class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
                                 @click="showModal1 = true"> Edit </button>
+
                             </div>
                           </td>
 
@@ -356,8 +355,96 @@
         </div>
 	<!--actual component end-->
 </div>
+</div>
 
-<script>
+
+
+    <!--Modal-->
+    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+      <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+      <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+
+        <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+          <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+          </svg>
+          <span class="text-sm">(Esc)</span>
+        </div>
+
+        <!-- Add margin if you want to see some of the overlay behind the modal-->
+        <div class="modal-content py-4 text-left px-6">
+          <!--Title-->
+          <div class="flex justify-between items-center pb-3">
+            <p class="text-2xl font-bold">Simple Modal!</p>
+            <div class="modal-close cursor-pointer z-50">
+              <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!--Body-->
+          <p>Modal content can go here</p>
+          <p>...</p>
+          <p>...</p>
+          <p>...</p>
+          <p>...</p>
+
+          <!--Footer-->
+          <div class="flex justify-end pt-2">
+            <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Action</button>
+            <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var openmodal = document.querySelectorAll('.modal-open')
+      for (var i = 0; i < openmodal.length; i++) {
+        openmodal[i].addEventListener('click', function(event){
+          event.preventDefault()
+          toggleModal()
+        })
+      }
+
+      const overlay = document.querySelector('.modal-overlay')
+      overlay.addEventListener('click', toggleModal)
+
+      var closemodal = document.querySelectorAll('.modal-close')
+      for (var i = 0; i < closemodal.length; i++) {
+        closemodal[i].addEventListener('click', toggleModal)
+      }
+
+      document.onkeydown = function(evt) {
+        evt = evt || window.event
+        var isEscape = false
+        if ("key" in evt) {
+          isEscape = (evt.key === "Escape" || evt.key === "Esc")
+        } else {
+          isEscape = (evt.keyCode === 27)
+        }
+        if (isEscape && document.body.classList.contains('modal-active')) {
+          toggleModal()
+        }
+      };
+
+
+      function toggleModal () {
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.modal')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
+      }
+
+
+    </script>
+
+
+  <script>
 	function setup() {
     return {
       activeTab: 0,
@@ -367,98 +454,10 @@
           "Jenis Pelanggaran",
           "Laporan"
       ]
+
     };
+
   };
+
 </script>
-</div>
-{{-- <!-- Modal edit -->
-<div
-class="fixed inset-0 w-full h-full z-20 bg-black bg-opacity-50 duration-300 overflow-y-auto"
-x-show="showModal1"
-x-transition:enter="transition duration-300"
-x-transition:enter-start="opacity-0"
-x-transition:enter-end="opacity-100"
-x-transition:leave="transition duration-300"
-x-transition:leave-start="opacity-100"
-x-transition:leave-end="opacity-0"
->
-<div class="relative sm:w-3/4 md:w-1/2 lg:w-1/3 mx-2 sm:mx-auto my-10 opacity-100">
-<div
-    class="relative bg-white shadow-lg rounded-md text-gray-900 z-20"
-    @click.away="showModal1 = false"
-    x-show="showModal1"
-    x-transition:enter="transition transform duration-300"
-    x-transition:enter-start="scale-0"
-    x-transition:enter-end="scale-100"
-    x-transition:leave="transition transform duration-300"
-    x-transition:leave-start="scale-100"
-    x-transition:leave-end="scale-0"
->
-    <header class="flex items-center justify-between p-2">
-    <h2 class="font-semibold">Edit Data Siswa</h2>
-    <button class="focus:outline-none p-2" @click="showModal1 = false">
-        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-        <path
-            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
-        ></path>
-        </svg>
-    </button>
-    </header>
-
-    <main class="p-2 text-center">
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">NISN</label>
-              <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="NISN" />
-            </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Siswa</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Nama Siswa" />
-              </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
-              <div class="grid grid-cols-1">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Tanggal lahir</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="date" placeholder="Tanggal Lahir" />
-              </div>
-              <div class="grid grid-cols-1">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Selection</label>
-                <select class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
-                  <option>Laki-Laki</option>
-                  <option>Perempuan</option>
-                </select>
-
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Alamat</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Alamat" />
-              </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Wali</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Nama Wali" />
-            </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">No Telpon Wali</label>
-              <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="No Telpon Wali" />
-            </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-
-            </div>
-
-            <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
-
-              <button class='w-auto bg-green-500 hover:bg-green-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Create</button>
-            </div>
-    </main>
-    <footer class="flex justify-center p-2">
-    </footer>
-</div>
-</div>
-</div> --}}
 </x-app-layout>
