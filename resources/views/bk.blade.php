@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="title">
-        admin
+        Bimbingan Konseling
     </x-slot>
 
     <x-slot name="header">
@@ -71,9 +71,8 @@
                           <td class="px-4 py-4">081 *** *** ***</td>
                           <td class="px-4 py-4">
                             <div class="md:space-x-2 space-y-10 md:space-y-0">
-                                <button
-                                class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                                @click="showModal1 = true"> Edit </button>
+                              <button class="modal1-open bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2">Edit</button>
+
 
                             </div>
                           </td>
@@ -148,9 +147,7 @@
                         </div>
                         <div class="overflow-x-auto mt-6 w-full">
                             <div class="md:space-x-2 space-y-10 md:space-y-0">
-                                <button
-                                class="bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                                @click="showModal1 = true"> Tambah Data </button>
+                              <button class="modal-open bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2">Tambah Data</button>
                             </div>
 
                         <table class="table-auto border-collapse w-full">
@@ -353,54 +350,174 @@
 
         <div x-show="activeTab===5">
         </div>
-	<!--actual component end-->
+        	<!--actual component end-->
 </div>
 </div>
 
-
-
-    <!--Modal-->
+    <!--Modal Tambah Data Siswa-->
     <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
       <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
 
       <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
-
         <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
-          <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-          </svg>
-          <span class="text-sm">(Esc)</span>
         </div>
 
         <!-- Add margin if you want to see some of the overlay behind the modal-->
         <div class="modal-content py-4 text-left px-6">
           <!--Title-->
           <div class="flex justify-between items-center pb-3">
-            <p class="text-2xl font-bold">Simple Modal!</p>
-            <div class="modal-close cursor-pointer z-50">
-              <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-              </svg>
+            <p class="text-2xl font-bold">Data Siswa</p>
+          </div>
+
+          <!--Body modal-->
+          <div class="grid grid-cols-1 mt-2 mx-3">
+            <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">NIS</label>
+            <input
+          type="text"
+          name="NIS"
+          placeholder=" "
+          class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200"/>
+          </div>
+
+          <div class="grid grid-cols-1 mt-2 mx-3">
+            <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Siswa</label>
+            <input
+          type="text"
+          name="nama siswa"
+          placeholder=" "
+          class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200" />
+      </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-3">
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Tanggal Lahir </label>
+              <input
+              type="date"
+              name="tanggl lahir"
+              placeholder=" "
+              class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200"/>
+            </div>
+
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Alamat </label>
+              <input
+              type="text"
+              name="alamat"
+              placeholder=" "
+              class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200"/>
+            </div>
+
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Jenis Kelamin</label>
+              <select class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200">
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+              </select>
+            </div>
+
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">No Tlpn </label>
+              <input class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200" type="text" placeholder="" />
             </div>
           </div>
 
-          <!--Body-->
-          <p>Modal content can go here</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
-          <p>...</p>
+          <div class="grid grid-cols-1 mt-4 mx-3">
+            <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Wali </label>
+            <input class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200" type="text" placeholder="" />
+          </div>
 
           <!--Footer-->
           <div class="flex justify-end pt-2">
-            <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Action</button>
-            <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
+            <button class="modal-close bg-red-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-red-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2">Batal</button>
+            <button class="bg-green-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2">Simpan</button>
           </div>
 
         </div>
       </div>
     </div>
 
+    <!-- Modal Edit Data Siswa-->
+    <div class="modal1 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+      <div class="modal1-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+      <div class="modal1-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        <div class="modal1-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+        </div>
+
+        <!-- Add margin if you want to see some of the overlay behind the modal-->
+        <div class="modal1-content py-4 text-left px-6">
+          <!--Title-->
+          <div class="flex justify-between items-center pb-3">
+            <p class="text-2xl font-bold">Edit Data Siswa</p>
+          </div>
+
+          <!--Body modal-->
+          <div class="grid grid-cols-1 mt-2 mx-3">
+            <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">NIS</label>
+            <input
+            type="text"
+            name="NIS"
+            placeholder=" "
+            class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200"/>
+          </div>
+
+          <div class="grid grid-cols-1 mt-2 mx-3">
+            <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Siswa</label>
+            <input
+            type="text"
+            name="nama siswa"
+            placeholder=" "
+            class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200"/>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-3">
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Tanggal Lahir </label>
+              <input
+              type="date"
+              name="tanggl lahir"
+              placeholder=" "
+              class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200"/>
+            </div>
+
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Alamat </label>
+              <input
+              type="text"
+              name="alamat"
+              placeholder=" "
+              class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200"/>
+            </div>
+
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Jenis Kelamin</label>
+              <select class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200">
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+              </select>
+            </div>
+
+            <div class="grid grid-cols-1">
+              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">No Tlpn </label>
+              <input class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200" type="text" placeholder="" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 mt-4 mx-3">
+            <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Wali </label>
+            <input class="pt-1 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-green-200" type="text" placeholder="" />
+          </div>
+
+          <!--Footer-->
+          <div class="flex justify-end pt-2">
+            <button class="modal1-close bg-red-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-red-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2">Batal</button>
+            <button class="bg-green-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2">Simpan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{-- tambah data siswa --}}
     <script>
       var openmodal = document.querySelectorAll('.modal-open')
       for (var i = 0; i < openmodal.length; i++) {
@@ -409,7 +526,6 @@
           toggleModal()
         })
       }
-
       const overlay = document.querySelector('.modal-overlay')
       overlay.addEventListener('click', toggleModal)
 
@@ -431,7 +547,6 @@
         }
       };
 
-
       function toggleModal () {
         const body = document.querySelector('body')
         const modal = document.querySelector('.modal')
@@ -439,25 +554,59 @@
         modal.classList.toggle('pointer-events-none')
         body.classList.toggle('modal-active')
       }
+    </script>
 
+    {{-- edit data siswa --}}
+    <script>
+      var openmodal = document.querySelectorAll('.modal1-open')
+      for (var i = 0; i < openmodal.length; i++) {
+        openmodal[i].addEventListener('click', function(event){
+          event.preventDefault()
+          toggleModal()
+        })
+      }
+      const overlay = document.querySelector('.modal1-overlay')
+      overlay.addEventListener('click', toggleModal)
 
+      var closemodal = document.querySelectorAll('.modal1-close')
+      for (var i = 0; i < closemodal.length; i++) {
+        closemodal[i].addEventListener('click', toggleModal)
+      }
+
+      document.onkeydown = function(evt) {
+        evt = evt || window.event
+        var isEscape = false
+        if ("key" in evt) {
+          isEscape = (evt.key === "Escape" || evt.key === "Esc")
+        } else {
+          isEscape = (evt.keyCode === 27)
+        }
+        if (isEscape && document.body.classList.contains('modal1-active')) {
+          toggleModal()
+        }
+      };
+
+      function toggleModal () {
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.modal1')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal1-active')
+      }
     </script>
 
 
-  <script>
-	function setup() {
-    return {
-      activeTab: 0,
-      tabs: [
-          "Data Siswa",
-          "Data Pelanggaran",
-          "Jenis Pelanggaran",
-          "Laporan"
-      ]
-
-    };
-
-  };
-
-</script>
+    <script>
+      function setup() {
+        return {
+          activeTab: 0,
+          tabs: [
+              "Data Siswa",
+              "Data Pelanggaran",
+              "Jenis Pelanggaran",
+              "Laporan"
+          ]
+        };
+      };
+    </script>
 </x-app-layout>
