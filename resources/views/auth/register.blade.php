@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <x-application-logo class="w-20 h-20 text-gray-500 fill-current" />
             </a>
         </x-slot>
 
@@ -12,18 +12,25 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <!-- Name -->
+            <!-- Nama -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="nama" :value="__('Nama')" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="nama" class="block mt-1 w-full" type="text" name="nama" :value="old('nama')" required autofocus />
             </div>
 
-            <!-- Email Address -->
+            <!-- Username -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="username" :value="__('Username')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required />
+            </div>
+
+            <!-- Status -->
+            <div class="mt-4">
+                <x-label for="status" :value="__('Status')" />
+
+                <x-input id="status" class="block mt-1 w-full" type="text" name="status" :value="old('status')" required />
             </div>
 
             <!-- Password -->
@@ -45,11 +52,7 @@
                                 name="password_confirmation" required />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
+            <div class="flex justify-end items-center mt-4">
                 <x-button class="ml-4">
                     {{ __('Register') }}
                 </x-button>

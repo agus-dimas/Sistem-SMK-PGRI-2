@@ -13,16 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // /Navigasi//
-Route::view('/','home')->name('home');
-Route::view('/visi', 'visi')-> name('visi');
-Route::view('/organisasi', 'organisasi')-> name('organisasi');
-
-
-Route::get('/bk', function () {
-    return view('bk');
-})->middleware(['auth'])->name('bk');
-
 require __DIR__.'/auth.php';
 
-Route::view('/kepsek', 'kepsek')-> name('kepsek');
-Route::view('/personal', 'personal')-> name('personal');
+Route::view('/', 'login')->name('home');
+
+Route::get('/visi', function () {
+    return view('visi');
+})->name('visi');
+
+Route::get('/organisasi', function () {
+    return view('organisasi');
+})->name('organisasi');
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/bk', function () {
+        return view('bk');
+    })->name('bk');
+
+    Route::get('/kepsek', function () {
+        return view('kepsek');
+    })->name('kepsek');
+
+    Route::get('/personal', function () {
+        return view('personal');
+    })->name('personal');
+});
