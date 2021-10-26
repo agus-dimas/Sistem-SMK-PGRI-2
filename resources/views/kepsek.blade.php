@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="title">
-        admin
+        Kepala Sekolah
     </x-slot>
 
     <x-slot name="header">
@@ -39,17 +39,14 @@
                       </div>
                     </div>
                     <div class="overflow-x-auto mt-6 w-full">
-                    <div class="md:space-x-2 space-y-10 md:space-y-0">
-                        <button
-                        class="bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                        @click="showModal1 = true"> Tambah Data </button>
-                    </div>
                     <table class="table-auto border-collapse w-full">
                       <thead>
                         <tr class="rounded-lg text-sm font-medium text-gray-700 text-left" style="font-size: 0.9674rem">
                           <th class="px-4 py-2 bg-gray-200 " style="background-color:#f8f8f8">No</th>
                           <th class="px-4 py-2 " style="background-color:#f8f8f8">NIS</th>
                           <th class="px-4 py-2 " style="background-color:#f8f8f8">Nama Siswa</th>
+                          <th class="px-4 py-2 " style="background-color:#f8f8f8">Kelas</th>
+                          <th class="px-4 py-2 " style="background-color:#f8f8f8">Tahun Ajaran</th>
                           <th class="px-4 py-2 " style="background-color:#f8f8f8">Tgl Lahir</th>
                           <th class="px-4 py-2 " style="background-color:#f8f8f8">Jenis Kelamin</th>
                           <th class="px-4 py-2 " style="background-color:#f8f8f8">Alamat</th>
@@ -61,15 +58,17 @@
                       </thead>
                       <tbody class="text-sm font-normal text-gray-700">
                         <tr class="hover:bg-gray-100 border-b border-gray-200 py-10">
-                          <td class="px-4 py-4">1</td>
-                          <td class="px-4 py-4">884001</td>
-                          <td class="px-4 py-4">Ajie</td>
-                          <td class="px-4 py-4">14-11-98</td>
-                          <td class="px-4 py-4">Laki-laki</td>
-                          <td class="px-4 py-4">Aokigahara</td>
-                          <td class="px-4 py-4">PP Miky</td>
-                          <td class="px-4 py-4">081 *** *** ***</td>
-                          <td class="px-4 py-4">
+                            <td class="px-4 py-4">1</td>
+                            <td class="px-4 py-4">884001</td>
+                            <td class="px-4 py-4">Ajie</td>
+                            <td class="px-4 py-4">X IPA</td>
+                            <td class="px-4 py-4">2017</td>
+                            <td class="px-4 py-4">14-11-98</td>
+                            <td class="px-4 py-4">Laki-laki</td>
+                            <td class="px-4 py-4">Aokigahara</td>
+                            <td class="px-4 py-4">PP Miky</td>
+                            <td class="px-4 py-4">081 *** *** ***</td>
+                            <td class="px-4 py-4">
                             <div class="md:space-x-2 space-y-10 md:space-y-0">
                                 <button
                                 class="bg-green-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
@@ -146,12 +145,6 @@
                           </div>
                         </div>
                         <div class="overflow-x-auto mt-6 w-full">
-                        <div class="md:space-x-2 space-y-10 md:space-y-0">
-                            <button
-                            class="bg-green-400 font-semibold text-white p-1 w-40 rounded-full hover:bg-green-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                            @click="showModal1 = true"> Tambah Data </button>
-                        </div>
-
                         <table class="table-auto border-collapse w-full">
                           <thead>
                             <tr class="rounded-lg text-sm font-medium text-gray-700 text-left" style="font-size: 0.9674rem">
@@ -159,25 +152,20 @@
                               <th class="px-4 py-2 " style="background-color:#f8f8f8">Tanggal</th>
                               <th class="px-4 py-2 " style="background-color:#f8f8f8">NIS</th>
                               <th class="px-4 py-2 " style="background-color:#f8f8f8">Nama Siswa</th>
-                              <th class="px-4 py-2 " style="background-color:#f8f8f8">Tahun Ajaran</th>
-                              <th class="px-4 py-2 " style="background-color:#f8f8f8">Semester</th>
-                              <th class="px-4 py-2 " style="background-color:#f8f8f8">Kode Pelanggaran</th>
-                              <th class="px-4 py-2 " style="background-color:#f8f8f8">Jenis Pelanggaran</th>
+                              <th class="px-4 py-2 " style="background-color:#f8f8f8">Kelas</th>
+                              <th class="px-4 py-2 " style="background-color:#f8f8f8">Angkatan</th>
                               <th class="px-4 py-2 " style="background-color:#f8f8f8">Poin</th>
                               <th class="px-4 py-2 " style="background-color:#f8f8f8">Opsi</th>
-
                             </tr>
                           </thead>
                           <tbody class="text-sm font-normal text-gray-700">
                             <tr class="hover:bg-gray-100 border-b border-gray-200 py-10">
-                              <td class="px-4 py-4">1</td>
+                                <td class="px-4 py-4">1</td>
                               <td class="px-4 py-4">9/7/2021</td>
                               <td class="px-4 py-4">884001</td>
                               <td class="px-4 py-4">Ajie</td>
+                              <td class="px-4 py-4">X IPA</td>
                               <td class="px-4 py-4">2017</td>
-                              <td class="px-4 py-4">Semester Genap</td>
-                              <td class="px-4 py-4">I ( Pelecehan Seksual )</td>
-                              <td class="px-4 py-4">Ngentod</td>
                               <td class="px-4 py-4">20</td>
                               <td class="px-4 py-4">
                                 <div class="md:space-x-2 space-y-10 md:space-y-0">
@@ -220,8 +208,8 @@
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M15 12C15 11.7348 14.8946 11.4804 14.7071 11.2929L10.7071 7.2929C10.3166 6.9024 9.6834 6.9024 9.2929 7.2929C8.9024 7.6834 8.9024 8.3166 9.2929 8.7071L12.5858 12L9.2929 15.2929C8.9024 15.6834 8.9024 16.3166 9.2929 16.7071C9.6834 17.0976 10.3166 17.0976 10.7071 16.7071L14.7071 12.7071C14.8946 12.5196 15 12.2652 15 12Z" fill="#18A0FB"/>
                   </svg>
 
-                        </div>
-                      </div>
+                    </div>
+                  </div>
 
                   <style>
 
@@ -259,100 +247,9 @@
       tabs: [
           "Data Siswa",
           "Data Pelanggaran",
-          "Laporan"
       ]
     };
   };
 </script>
 </div>
-{{-- <!-- Modal edit -->
-<div
-class="fixed inset-0 w-full h-full z-20 bg-black bg-opacity-50 duration-300 overflow-y-auto"
-x-show="showModal1"
-x-transition:enter="transition duration-300"
-x-transition:enter-start="opacity-0"
-x-transition:enter-end="opacity-100"
-x-transition:leave="transition duration-300"
-x-transition:leave-start="opacity-100"
-x-transition:leave-end="opacity-0"
->
-<div class="relative sm:w-3/4 md:w-1/2 lg:w-1/3 mx-2 sm:mx-auto my-10 opacity-100">
-<div
-    class="relative bg-white shadow-lg rounded-md text-gray-900 z-20"
-    @click.away="showModal1 = false"
-    x-show="showModal1"
-    x-transition:enter="transition transform duration-300"
-    x-transition:enter-start="scale-0"
-    x-transition:enter-end="scale-100"
-    x-transition:leave="transition transform duration-300"
-    x-transition:leave-start="scale-100"
-    x-transition:leave-end="scale-0"
->
-    <header class="flex items-center justify-between p-2">
-    <h2 class="font-semibold">Edit Data Siswa</h2>
-    <button class="focus:outline-none p-2" @click="showModal1 = false">
-        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-        <path
-            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
-        ></path>
-        </svg>
-    </button>
-    </header>
-
-    <main class="p-2 text-center">
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">NISN</label>
-              <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="NISN" />
-            </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Siswa</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Nama Siswa" />
-              </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
-              <div class="grid grid-cols-1">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Tanggal lahir</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="date" placeholder="Tanggal Lahir" />
-              </div>
-              <div class="grid grid-cols-1">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Selection</label>
-                <select class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
-                  <option>Laki-Laki</option>
-                  <option>Perempuan</option>
-                </select>
-
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Alamat</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Alamat" />
-              </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Nama Wali</label>
-                <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="Nama Wali" />
-            </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-              <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">No Telpon Wali</label>
-              <input class="py-2 px-3 rounded-lg border-2 border-silver-300 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" type="text" placeholder="No Telpon Wali" />
-            </div>
-
-            <div class="grid grid-cols-1 mt-5 mx-7">
-
-            </div>
-
-            <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
-
-              <button class='w-auto bg-green-500 hover:bg-green-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Create</button>
-            </div>
-    </main>
-    <footer class="flex justify-center p-2">
-    </footer>
-</div>
-</div>
-</div> --}}
 </x-app-layout>

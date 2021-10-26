@@ -18,7 +18,7 @@
                        <div class="bg-white p-3 border-t-4 border-green-400">
                            <div class="image overflow-hidden">
                                <img class="h-auto w-full mx-auto"
-                                   src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
+                                   src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
                                    alt="">
                            </div>
                            <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">Ajie Pangestu</h1>
@@ -97,7 +97,7 @@
                              </div>
                             </div>
                            <button
-                               class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-400 hover:shadow-xs p-3 my-4">Cetak Laporan</button>
+                               class="block w-full text-green-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-400 hover:shadow-xs p-3 my-4">Cetak Laporan</button>
                             </div>
                        <!-- End of about section -->
 
@@ -127,8 +127,8 @@
                                         <th class="px-4 py-2 " style="background-color:#f8f8f8">NIS</th>
 
                                         <th class="px-4 py-2 " style="background-color:#f8f8f8">Semester</th>
-                                        <th class="px-4 py-2 " style="background-color:#f8f8f8">Kode Pelanggaran</th>
-                                        <th class="px-4 py-2 " style="background-color:#f8f8f8">Jenis Pelanggaran</th>
+                                        <th class="px-4 py-2 " style="background-color:#f8f8f8">Kategori</th>
+                                        <th class="px-4 py-2 " style="background-color:#f8f8f8">Nama Pelanggaran</th>
                                         <th class="px-4 py-2 " style="background-color:#f8f8f8">Poin</th>
                                         <th class="px-4 py-2 " style="background-color:#f8f8f8">Sanksi</th>
                                         <th class="px-4 py-2 " style="background-color:#f8f8f8">Opsi</th>
@@ -142,14 +142,14 @@
                                         <td class="px-4 py-4">9/7/2021</td>
                                         <td class="px-4 py-4">884001</td>
                                         <td class="px-4 py-4">Semester Genap</td>
-                                        <td class="px-4 py-4">I ( Pelecehan Seksual )</td>
-                                        <td class="px-4 py-4">Ngentod</td>
+                                        <td class="px-4 py-4">Berpakaian</td>
+                                        <td class="px-4 py-4">Tidak Memakami Baju</td>
                                         <td class="px-4 py-4">20</td>
                                         <td class="px-4 py-4">Pemanggilan Orang Tua</td>
                                         <td class="px-4 py-4">
                                         <button
-                                        class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                                        @click="showModal1 = true"> SMS </button>
+                                        class="bg-red-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-red-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
+                                        @click="showModal1 = true"> Hapus </button>
                                         </td>
                                     </tr>
 
@@ -158,14 +158,14 @@
                                         <td class="px-4 py-4">9/7/2021</td>
                                         <td class="px-4 py-4">884001</td>
                                         <td class="px-4 py-4">Semester Genap</td>
-                                        <td class="px-4 py-4">I ( Pelecehan Seksual )</td>
-                                        <td class="px-4 py-4">Ngentod</td>
+                                        <td class="px-4 py-4">Berpakaian</td>
+                                        <td class="px-4 py-4">Tidak Memakami Baju</td>
                                         <td class="px-4 py-4">20</td>
                                         <td class="px-4 py-4">Pemanggilan Orang Tua</td>
                                         <td class="px-4 py-4">
                                         <button
-                                        class="bg-yellow-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
-                                        @click="showModal1 = true"> SMS </button>
+                                        class="bg-red-400 font-semibold text-white p-1 w-20 rounded-full hover:bg-red-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"
+                                        @click="showModal1 = true"> Hapus </button>
                                         </td>
                                     </tr>
                                     </tbody>
