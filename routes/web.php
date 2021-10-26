@@ -15,20 +15,21 @@ use Illuminate\Support\Facades\Route;
 // /Navigasi//
 require __DIR__.'/auth.php';
 
-Route::view('/', 'home')->name('home');
+Route::view('/', 'login')->name('home');
+
+Route::get('/visi', function () {
+    return view('visi');
+})->name('visi');
+
+Route::get('/organisasi', function () {
+    return view('organisasi');
+})->name('organisasi');
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/bk', function () {
         return view('bk');
     })->name('bk');
-
-    Route::get('/visi', function () {
-        return view('visi');
-    })->name('visi');
-
-    Route::get('/organisasi', function () {
-        return view('organisasi');
-    })->name('organisasi');
 
     Route::get('/kepsek', function () {
         return view('kepsek');

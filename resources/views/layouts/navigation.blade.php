@@ -20,7 +20,7 @@
                     <x-nav-link :href="route('kepsek')" :active="request()->routeIs('kepsek')">
                         {{ __('Kepala Sekolah') }}
                     </x-nav-link>
-                <!-- Navigation home -->
+                @else
                     <x-nav-link :href="route('visi')" :active="request()->routeIs('visi')">
                         {{ __('Visi & Misi') }}
                     </x-nav-link>
